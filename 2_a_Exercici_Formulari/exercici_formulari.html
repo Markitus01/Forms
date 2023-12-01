@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="Author" content=".........">
+    <script type="text/javascript" language="javascript" src="exForm.js"></script>
     <title>
     Exercici Formulari
     </title>   
@@ -23,5 +24,30 @@
 		<li>Passats 10 segons netejar els valors de la variable JSON anterior.</li>
 		<li>Si les dades no són vàlides, mostrar informació a l'usuari per saber on són les errades. Aquesta informació desapareix en el moment que l'usuari tornar a fer un submit</li>
     </ul>
+
+    <form name="form" id="form" action="#">
+        <fieldset style="width: 30vw;">
+            <legend>Formulari</legend>
+            <fieldset>
+                <legend>Dades personals</legend>
+
+                <p>Nom: <br> <input type="text"></p>
+                <p>Cognoms: <br> <input type="text"></p>
+                <p>DNI: <br> <input type="text"></p>
+                
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Dades de conexió</legend>
+
+                <p>Usuari: <br> <input type="text"></p>
+                <p>Contrasenya: <br> <input type="password"></p>
+                <p>Confirma contrasenya: <br> <input type="password"></p>
+
+            </fieldset>
+
+            <p><input type="submit" value="Enviar"></p>
+        </fieldset>
+    </form>
 </body>
 </html>

@@ -1,24 +1,24 @@
 ﻿   document.addEventListener('DOMContentLoaded',function ()
     {
-		    //document.getElementsByName("clear")[0].addEventListener("click",clearForm);
-        // com que el input és de type reset, no cal programar l'event següent:
-        // document.getElementsByName("reset_form")[0].addEventListener("click",function (ev) {
-            // /*
-            // OBSERVACIÓ: 
-                // el 1r paràmetre de la funció i this són equivalents
-                // en aquelles funcions executades via un escoltador a un esdeveniment
-            // */
-            // console.info(ev.target);
-            // console.info(this);
-          //  document.forms.data_entry.reset(); // és equivalent a l'instrucció següent. Accés via name
-           //  document.forms.data_entry_frm.reset(); // és equivalent a l'anterior instrucció. Accés via id
-            // });
-            // 
+		    document.getElementsByName("clear")[0].addEventListener("click",clearForm);
+        //com que el input és de type reset, no cal programar l'event següent:
+        document.getElementsByName("reset_form")[0].addEventListener("click",function (ev) {
+            /*
+            OBSERVACIÓ: 
+                el 1r paràmetre de la funció i this són equivalents
+                en aquelles funcions executades via un escoltador a un esdeveniment
+            */
+            console.info(ev.target);
+            console.info(this);
+           document.forms.data_entry.reset(); // és equivalent a l'instrucció següent. Accés via name
+            document.forms.data_entry_frm.reset(); // és equivalent a l'anterior instrucció. Accés via id
+            });
+            
             
             
           // si l'esdeveniment reset retorna fals, no es neteja el formulari
          document.forms.data_entry.addEventListener("reset",function (ev) {
-             ev.preventDefault();
+            //  ev.preventDefault();
             
          });
     
