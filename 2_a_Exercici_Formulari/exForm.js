@@ -2,9 +2,15 @@ document.addEventListener("DOMContentLoaded", main);
 
 function main()
 {
+    // Agafem el formulari i li donem un mínim d'estils
     let formulari = document.getElementById("form");
+    formulari.style.width = "50vw";
+    formulari.style.backgroundColor = "#a29bfe";
+    formulari.style.padding = "2vw";
+    formulari.style.border = "2px solid black";
+    formulari.style.borderRadius = "5px";
 
-    let elem = "";
+    let elem = ""; // Bucle que modifica l'estil del formulari
     for (let i = 0; i < formulari.elements.length; i++)
     {
         // console.log(formulari.elements[i]);
@@ -43,9 +49,6 @@ function main()
                     formulari.elements[i].style.borderRadius = "100%";
                     formulari.elements[i].style.color = "Blue";
                 }
-                break;
-        
-            default:
                 break;
         }
     }
