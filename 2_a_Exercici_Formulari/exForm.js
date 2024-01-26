@@ -52,4 +52,27 @@ function main()
                 break;
         }
     }
+
+    let nom         = document.getElementsByTagName("input")[0];
+    let cognoms     = document.getElementsByTagName("input")[1];
+    let dni         = document.getElementsByTagName("input")[2];
+    let usuari      = document.getElementsByTagName("input")[3];
+    let contra      = document.getElementsByTagName("input")[4];
+    let confirma    = document.getElementsByTagName("input")[5];
+
+    let regex_cognoms = /(^[A-Z][a-z]{2,})([ ][A-Z][a-z]{2,})?$/;
+
+    formulari.addEventListener("submit", function (e)
+    {
+        e.preventDefault();
+
+        if (regex_cognoms.test(cognoms.value))
+        {
+            alert("Cognoms valid");
+        }
+        else
+        {
+            alert("Cognoms de merda");
+        }
+    });
 }
