@@ -60,7 +60,17 @@ function main()
     let contra      = document.getElementsByTagName("input")[4];
     let confirma    = document.getElementsByTagName("input")[5];
 
-    let regex_cognoms = /(^[A-Z][a-z]{2,})([ ][A-Z][a-z]{2,})?$/;
+    let regex_nomcognoms    = /(^[A-Z][a-z]{2,})([ ][A-Z][a-z]{2,})?$/;
+    let regex_dni           = /^[0-9]{8}[A-Z]$/;
+    let regex_usuari        = /^[a-zA-Z0-9]{3,}$/;
+    let regex_contrasenya   = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
+    let arrayErrors = [];
+
+    nom.addEventListener("focusout", function()
+    {
+        
+    });
 
     formulari.addEventListener("submit", function (e)
     {
